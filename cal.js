@@ -1,22 +1,19 @@
-const a=+prompt('Enter A: ')
-const o = prompt('Enter Operator: ')
-const b=+prompt('Enter B: ')
 
-switch(o) {
-    case "+":
-        console.log(a+b);
-        break;
-    case "-":
-        console.log(a-b);
-        break;
-    case "*":
-        console.log(a*b);
-        break;
-    case "/":
-        console.log(a/b);
-        break;
-        default:
-            console.log('invalid operator')
-            break;
+const operator = prompt("Enter operator ( either +, -, * or / ): ");
+
+const number1 = parseFloat(prompt("Enter first number: "));
+const number2 = parseFloat(prompt("Enter second number: "));
+
+let result;
+
+if (operator == "+") {
+  result = number1 + number2;
+} else if (operator == "-") {
+  result = number1 - number2;
+} else if (operator == "*") {
+  result = number1 * number2;
+} else {
+  result = number1 / number2;
 }
 
+alert(`${number1} ${operator} ${number2} = ${result}`);
